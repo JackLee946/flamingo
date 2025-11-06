@@ -83,3 +83,5 @@ flamingoclient/Source/.DS_Store
 flamingoclient/Source/net/.DS_Store
 flamingoserver/.DS_Store
 flamingoserver/.vs/
+flamingoserver/build/
+flamingoserver/table_fixed.sql
