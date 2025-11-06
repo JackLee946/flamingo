@@ -1,21 +1,21 @@
-flamingoclient/.vs/
-flamingoclient/CatchScreen/Release/
-flamingoclient/CatchScreen/debug/
-flamingoclient/Source/Release/
-flamingoclient/Source/flamingo.aps
-flamingoclient/iAutoUpdate/Release/
+FlashIMClient/.vs/
+FlashIMClient/CatchScreen/Release/
+FlashIMClient/CatchScreen/debug/
+FlashIMClient/Source/Release/
+FlashIMClient/Source/flamingo.aps
+FlashIMClient/iAutoUpdate/Release/
 
-flamingoserver/FlamingoServer.sdf
-flamingoserver/FlamingoServer.v12.suo
-flamingoserver/FlamingoServer.vcxproj.user
-flamingoserver/windowsproj/chatserver.exe
-flamingoserver/windowsproj/chatserver/
-flamingoserver/windowsproj/filecache/
-flamingoserver/windowsproj/fileserver.exe
-flamingoserver/windowsproj/fileserver/
-flamingoserver/windowsproj/imgserver.exe
-flamingoserver/windowsproj/imgserver/
-flamingoserver/windowsproj/x64/
+FlashIMServer/FlamingoServer.sdf
+FlashIMServer/FlamingoServer.v12.suo
+FlashIMServer/FlamingoServer.vcxproj.user
+FlashIMServer/windowsproj/chatserver.exe
+FlashIMServer/windowsproj/chatserver/
+FlashIMServer/windowsproj/filecache/
+FlashIMServer/windowsproj/fileserver.exe
+FlashIMServer/windowsproj/fileserver/
+FlashIMServer/windowsproj/imgserver.exe
+FlashIMServer/windowsproj/imgserver/
+FlashIMServer/windowsproj/x64/
 flamingoAndroid/build
 flamingoAndroid/.idea
 
@@ -29,7 +29,7 @@ iKutil.log
 *.o
 *.log
 LoginAccountList.data
-flamingoclient/Bin/Users/
+FlashIMClient/Bin/Users/
 *.ilk
 *.suo
 iUpdateAuto.exe
@@ -40,12 +40,12 @@ iUpdateAuto.exe
 # Compiled Dynamic libraries
 *.so
 *.dylib
-flamingoclient/Source/Debug/
-flamingoclient/iAutoUpdate/debug/
-flamingoclient/Bin/Flamingo.exe
-flamingoclient/Bin/CatchScreen.exe
+FlashIMClient/Source/Debug/
+FlashIMClient/iAutoUpdate/debug/
+FlashIMClient/Bin/Flamingo.exe
+FlashIMClient/Bin/CatchScreen.exe
 
-flamingoclient/Bin/Logs/
+FlashIMClient/Bin/Logs/
 
 # Compiled Static libraries
 *.lai
@@ -77,9 +77,9 @@ flamingoAndroid/app/src/main/java/org/hootina/.DS_Store
 flamingoAndroid/app/src/main/java/org/hootina/platform/.DS_Store
 flamingoAndroid/app/src/main/java/org/hootina/platform/model/.DS_Store
 flamingoAndroid/app/src/main/res/.DS_Store
-flamingoclient/.DS_Store
-flamingoclient/Bin/.DS_Store
-flamingoclient/Source/.DS_Store
-flamingoclient/Source/net/.DS_Store
-flamingoserver/.DS_Store
-flamingoserver/.vs/
+FlashIMClient/.DS_Store
+FlashIMClient/Bin/.DS_Store
+FlashIMClient/Source/.DS_Store
+FlashIMClient/Source/net/.DS_Store
+FlashIMServer/.DS_Store
+FlashIMServer/.vs/

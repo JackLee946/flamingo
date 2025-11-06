@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlashIM</string>
+    <string name="login_activity_title">FlashIM 鐧诲綍</string>
+    <string name="login_activity_srvsettings">鏈嶅姟鍣ㄨ缃?/string>
+    <string name="login_activity_usercancelinglogining">鎮ㄥ彇娑堜簡鐧婚檰</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="net_not_available">褰撳墠缃戠粶涓嶅彲鐢紝璇锋鏌ユ偍鐨勭綉缁滆缃紒</string>
+    
+    <!-- MainActivity option鑿滃崟 -->
+    <string name="exit_app_menu_item">閫€鍑虹▼搴?/string>
+    <string name="parse_img_error">瑙ｆ瀽鍥剧墖鍑洪敊</string>
+
+</resources>
+

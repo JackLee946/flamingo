@@ -1,12 +1,12 @@
-### Flamingo
+### FlashIM
 
 #### Introduction
 
-Flamingo is a high-performance & light-weight open-source IM software.  It has server side, Windows pc version and android version so far, and Wechat version and IOS version is under developing.
+FlashIM is a high-performance & light-weight open-source IM software.  It has server side, Windows pc version and android version so far, and Wechat version and IOS version is under developing.
 
 #### Feature List
 
-Flamingo has implemented these features belowÔºàRemind that we just list the features here related to network communication, as to some other features,  you can explore them in Flamingo by yourself.Ôºâ
+FlashIM has implemented these features below£®Remind that we just list the features here related to network communication, as to some other features,  you can explore them in FlashIM by yourself.Ôº?
 
 - user registering
 
@@ -32,7 +32,7 @@ Flamingo has implemented these features belowÔºàRemind that we just list the fea
 
 - reconnecting automatically when disconnecting
 
-- some other handsome features, such as three mode of friend list, playing animations when a friend going online, chat message history, auto-replying chat message when chatting, etc. You can explore more amazing features by your own in Flamingo.
+- some other handsome features, such as three mode of friend list, playing animations when a friend going online, chat message history, auto-replying chat message when chatting, etc. You can explore more amazing features by your own in FlashIM.
 
   
 
@@ -44,17 +44,17 @@ Flamingo has implemented these features belowÔºàRemind that we just list the fea
 
 1. Install **cmake**, **makefile** and **gcc** tools.
 
-‚Äã     Flamingo server is based on linux OS as platform(CentOS 7.0 is highly recommended), and compilers that support C++ 11 is required because the server code is fully developping with C++ 11. So on linux OS, the version of gcc/g++ must be high than 4.7(4.8.5 is recommended). In addition, cmake and makefile tool is required, so you need to install them.
+   FlashIM server is based on linux OS as platform(CentOS 7.0 is highly recommended), and compilers that support C++ 11 is required because the server code is fully developping with C++ 11. So on linux OS, the version of gcc/g++ must be high than 4.7(4.8.5 is recommended). In addition, cmake and makefile tool is required, so you need to install them.
 
 2. install **mysql**
 
-‚Äã    Flaming server uses mysql database to store user data. If your OS is CentOS 7.0, you need to install **mariadb-server**, **mariadb-client** and **mariadb-devel**. On other linux OS, you need to install **mysql-server**, **mysql-client** and **mysql-devel**.
+  FlashIM server uses mysql database to store user data. If your OS is CentOS 7.0, you need to install **mariadb-server**, **mariadb-client** and **mariadb-devel**. On other linux OS, you need to install **mysql-server**, **mysql-client** and **mysql-devel**.
 
-‚Äã    The Flamingo **chatserver** will use mysql database. The default database is named "**flamingo**". The database name,  login user account(including username, password, etc) is configured in the file **flamingoserver/etc/chatserver.conf**. You can change this configuration as you will.
+  The FlashIM **chatserver** will use mysql database. The default database is named "**FlashIM**". The database name,  login user account(including username, password, etc) is configured in the file **FlashIMserver/etc/chatserver.conf**. You can change this configuration as you will.
 
-‚Äã     When **chatserver** startups at first time, it will dectect whether the database you configured exist in mysql. If it does not exist, the **chatserver** will create it including creating its related tables. So you do not need to create the database and tables manually. However the SQL syntax of creating table differs a litle in different mysql version, some SQL of creating tables might failed in some mysql version, therefore under this condition, you have to create tables manually. We prepare these SQLs for you in the file **flamingoserver/table.sql**.
+   When **chatserver** startups at first time, it will dectect whether the database you configured exist in mysql. If it does not exist, the **chatserver** will create it including creating its related tables. So you do not need to create the database and tables manually. However the SQL syntax of creating table differs a litle in different mysql version, some SQL of creating tables might failed in some mysql version, therefore under this condition, you have to create tables manually. We prepare these SQLs for you in the file **FlashIMserver/table.sql**.
 
-Flamingo server uses four database tables illustrated below:
+FlashIM server uses four database tables illustrated below:
 
 |     Table Name      |                     Usage                      |
 | :-----------------: | :--------------------------------------------: |
@@ -64,7 +64,7 @@ Flamingo server uses four database tables illustrated below:
 
 ###### Compiling
 
-1. Enter **flamingoserver/** directory, then type commands below:
+1. Enter **FlashIMserver/** directory, then type commands below:
 
    ```
    cmake .
@@ -74,7 +74,7 @@ Flamingo server uses four database tables illustrated below:
 
    
 
-2. Execute commands below to generate executable programs: **chatserver**„ÄÅ**fileserver**„ÄÅ**imgserver**.
+2. Execute commands below to generate executable programs: **chatserver**°¢*fileserver**°¢*imgserver**.
 
    ```shell
    make
@@ -94,7 +94,7 @@ Flamingo server uses four database tables illustrated below:
 
    ###### How to Startup Servers
 
-   **chatserver**„ÄÅ**fileserver**„ÄÅ**imgserver** are independent with each other. You can startup one of them in Linux shell or run in daemon mode. Use following commands to run them in daemon mode:
+   **chatserver**„Ä?*fileserver**„Ä?*imgserver** are independent with each other. You can startup one of them in Linux shell or run in daemon mode. Use following commands to run them in daemon mode:
 
    ```shell
    ./chatserver -d
@@ -109,7 +109,7 @@ Flamingo server uses four database tables illustrated below:
    You can use lsof command to confirm that the specified ports are on listening state normally:
 
    ```shell
-   [zhangyl@localhost flamingoserver]$ lsof -i -Pn
+   [zhangyl@localhost FlashIMserver]$ lsof -i -Pn
    COMMAND     PID    USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
    chatserve 18540 zhangyl   19u  IPv4 1129031      0t0  TCP *:20000 (LISTEN)
    chatserve 18540 zhangyl   27u  IPv4 1129032      0t0  TCP *:8888 (LISTEN)
@@ -131,7 +131,7 @@ Flamingo server uses four database tables illustrated below:
    We can use Linux nc command to connect to the Port 8888 of chatserver in table above, in the form of **nc -v ip port**. The port argument here is 8888 and -v option makes nc command to display more detailed information. Here is the usage:
 
    ```
-   [zhangyl@localhost flamingoserver]$ nc -v 127.0.0.1 8888
+   [zhangyl@localhost FlashIMserver]$ nc -v 127.0.0.1 8888
    Ncat: Version 6.40 ( http://nmap.org/ncat )
    Ncat: Connected to 127.0.0.1:8888.
    1. help-show help info
@@ -159,62 +159,62 @@ Flamingo server uses four database tables illustrated below:
 
    #### PC Client Compiling and Installing
 
-   All you need to do is just that open file **Flamingo.sln** in **flamingoclient/** directory with Visual Studio 2019 and compile it . The solution includes three projects illstrated in the table below:Ôºö
+   All you need to do is just that open file **FlashIMClient.sln** in **FlashIMclient/** directory with Visual Studio 2019 and compile it . The solution includes three projects illstrated in the table below:Ôº?
 
    | Project Name |                       Usage                        |
    | :----------: | :------------------------------------------------: |
-   |   Flamingo   | The main executable program of Flamingo pc client. |
+   |   FlashIM   | The main executable program of FlashIM pc client. |
    | CatchScreen  |     A tool to catch screen in chatting window.     |
    | iUpdateAuto  |     Unzipping downloading files when upgrades.     |
 
-‚Äã      When compiling finished successfully, the executable programs will be located in directory **flamingoclient\Bin**. And the configuration file which contains configured lines is located in file **flamingoclient\Bin\config\flamingo.ini**. Run **Flamingo.exe** and have fun!     
+‚Ä?     When compiling finished successfully, the executable programs will be located in directory **FlashIMclient\Bin**. And the configuration file which contains configured lines is located in file **FlashIMclient\Bin\config\FlashIM.ini**. Run **FlashIM.exe** and have fun!     
 
 
 
 #### Android Version Compiling and Installing
 
-Use Android Studio to open the project in directory **flamingoAndroid** and build to generate **flamingo.apk** file. Install **flamingo.apk** to your mobiles. Server settings of Android version is on the logining Activity.
+Use Android Studio to open the project in directory **FlashIMAndroid** and build to generate **FlashIM.apk** file. Install **FlashIM.apk** to your mobiles. Server settings of Android version is on the logining Activity.
 
 
 
 #### Change Log
 
-I am afraid that I can not maintain Flamingo in regular intervals because I am very busy with my own work. But I promise that I am going to maintain Flamingo continually.
+I am afraid that I can not maintain FlashIM in regular intervals because I am very busy with my own work. But I promise that I am going to maintain FlashIM continually.
 
 Change Log see here: 
 
-[Flamingo Change Log](https://github.com/baloonwj/flamingo/issues/1)
+[FlashIM Change Log](https://github.com/baloonwj/FlashIM/issues/1)
 
 
 
 #### BUG Report
 
-If you have any questions, you can contact with me by sending email to balloonwj@qq.com. Also, you can report any bugs in the BUG Report Page, its link is https://github.com/baloonwj/flamingo/issues/5.
+If you have any questions, you can contact with me by sending email to balloonwj@qq.com. Also, you can report any bugs in the BUG Report Page, its link is https://github.com/baloonwj/FlashIM/issues/5.
 
-I promise that fatal problem of Flamingo, such as crashing or halting will be solved in three weekdays and other questions that are not severe will be responsed in two weeks.
+I promise that fatal problem of FlashIM, such as crashing or halting will be solved in three weekdays and other questions that are not severe will be responsed in two weeks.
 
 
 
 #### Contact
 
-At last not the least, if you have any suggestions or questions, welcome to contact with me. China Mainland users can contact with me by joining in my QQ group(**729995516**) or linking my public webchat account(„Äé**easy_coder**„Äè).  Also you can send me emails,  my email address is **balloonwj@qq.com**. I am waiting for You sincerely.
+At last not the least, if you have any suggestions or questions, welcome to contact with me. China Mainland users can contact with me by joining in my QQ group(**729995516**) or linking my public webchat account(„Ä?*easy_coder**„Ä?.  Also you can send me emails,  my email address is **balloonwj@qq.com**. I am waiting for You sincerely.
 
 
-#### Features Snapshot BelowÔºö
+#### Features Snapshot BelowÔº?
 
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/1.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/2.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/3.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/4.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/5.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/6.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/7.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/8.png)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/9.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/1.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/2.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/3.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/4.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/5.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/6.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/7.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/8.png)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/9.png)
 
 ##### Android Version Snapshot
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/m1.jpg)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/m2.jpg)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/m3.jpg)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/m4.jpg)
-![flamingo Snapshot](https://github.com/balloonwj/flamingo/blob/master/snapshots/m5.jpg)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/m1.jpg)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/m2.jpg)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/m3.jpg)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/m4.jpg)
+![FlashIM Snapshot](https://github.com/balloonwj/FlashIM/blob/master/snapshots/m5.jpg)
